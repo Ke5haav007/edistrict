@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "start-server": "npx pm2 start npx --name edistrict-backend -- ts-node src/index.ts",
+    "stop-server": "npx pm2 stop edistrict-backend && npx pm2 delete edistrict-backend"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +21,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pm2": "^6.0.5"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
