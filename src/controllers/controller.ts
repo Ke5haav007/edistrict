@@ -3,12 +3,8 @@ import { Request, Response } from 'express';
 import { getClient } from '../connections/connection';
 import { getEDistrictDataCollection } from '../models/models';
 import { EDistrictData } from '../models/models';
-
-
 import logger from '../common/logger';
-
 import dotenv from 'dotenv';
-
 dotenv.config();
 
 

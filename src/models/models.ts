@@ -7,7 +7,7 @@ export interface EDistrictData {
   id: string;
   type: string[];
   credentialSubject: {
-    casteCertificate: {
+    [certificateType: string]: {
       [key: string]: any;
     };
   };
@@ -19,7 +19,7 @@ export interface EDistrictData {
     proofPurpose: string;
     proofValue: string;
   };
-  [key: string]: any; // Optional fallback to accept any extra fields
+  [key: string]: any;
 }
 
 
